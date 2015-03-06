@@ -1,0 +1,104 @@
+.Teralogic__page-company{
+/*	background-image:url("bg/bg1.jpg");*/
+}
+
+.Teralogic__page-company_video{
+	position: relative;
+	top: 0;
+	left: 50%; 
+	height: 110%;
+	-webkit-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+}
+
+.Teralogic__page-company .Teralogic__container{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-direction: normal;
+	-moz-box-direction: normal;
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-content: space-around;
+	-ms-flex-line-pack: distribute;
+	align-content: space-around;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	line-height:37px;
+}
+
+.Teralogic__page-company-h{
+	font:normal 40px/60px "Circe-ExtraLight", sans-serif;
+	color:#fff;
+	margin:0px auto 21px;
+	text-align:center;
+	width:70%;
+}
+.Teralogic__page-company-h span{
+	background-color:rgba(0,0,0,0.5);
+	padding:1px 10px 0px;
+	box-decoration-break: clone;
+	-webkit-box-decoration-break:clone;
+}
+
+
+/*.Teralogic__page-company-h{
+	line-height: 1.4; 
+  padding: 2px 0; 
+  margin: 20px auto;
+}
+.Teralogic__page-company-h span { 
+  background-color: #c0c;
+  color: #fff; 
+  display: inline;
+  padding: 0.45rem;
+  
+  
+  box-decoration-break: clone;
+  -webkit-box-decoration-break:clone;
+}*/
+
+
+
+
+.Teralogic__page-company-p{
+	font:normal 20px/37px "Circe-ExtraLight", sans-serif;
+	color:#fff;
+	text-align:center;
+	margin:0px;
+	width:80%;
+}
+.Teralogic__page-company-p span{
+	background-color:rgba(0,0,0,0.5);
+	padding:4px 10px 4px;
+	box-decoration-break: clone;
+	-webkit-box-decoration-break:clone;
+}
+
+
+@media screen and (min-width: 10px) and (max-width:900px) {
+	.Teralogic__page-company-h{
+		font:normal 30px/46px "Circe-ExtraLight", sans-serif;
+	}
+	.Teralogic__page-company-p{
+		font:normal 16px/31px "Circe-ExtraLight", sans-serif;
+	}
+
+
+}
