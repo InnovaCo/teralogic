@@ -35,31 +35,41 @@
 }
 
 .Teralogic__page-activity-h{
-	font:normal 40px/60px "Circe-ExtraLight", sans-serif;
+	font:normal 40px/59px "Circe-ExtraLight", sans-serif;
 	color:#fff;
 	margin:0px auto 21px;
 	text-align:center;
-	width:70%;
+	width:60%;
 }
 .Teralogic__page-activity-h span{
 	background-color:rgba(0,0,0,0.5);
-	padding:1px 10px 0px;
+	padding:0px 10px 0px;
 	box-decoration-break: clone;
 	-webkit-box-decoration-break:clone;
 }
 
 .Teralogic__page-activity-p{
-	font:normal 20px/37px "Circe-ExtraLight", sans-serif;
+	font:normal 20px/33px "Circe-ExtraLight", sans-serif;
 	color:#fff;
 	text-align:center;
 	margin:0px;
-	width:80%;
+	width:85%;
 }
 .Teralogic__page-activity-p span{
 	background-color:rgba(0,0,0,0.5);
-	padding:4px 10px 4px;
+	padding:2px 10px 2px;
 	box-decoration-break: clone;
 	-webkit-box-decoration-break:clone;
+}
+
+
+@-moz-document url-prefix(){
+	.Teralogic__page-activity-h{
+		font:normal 40px/60px "Circe-ExtraLight", sans-serif;
+	}
+	.Teralogic__page-activity-p{
+		font:normal 20px/35px "Circe-ExtraLight", sans-serif;
+	}
 }
 
 @media screen and (min-width: 10px) and (max-width:900px) {

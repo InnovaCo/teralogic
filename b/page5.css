@@ -28,26 +28,26 @@
 }
 
 .Teralogic__page-contacts-h{
-	font:normal 40px/60px "Circe-ExtraLight", sans-serif;
+	font:normal 40px/59px "Circe-ExtraLight", sans-serif;
 	color:#fff;
 	width:45%;
 }
 .Teralogic__page-contacts-h span{
 	background-color:rgba(0,0,0,0.5);
-	padding:1px 10px 0px;
+	padding:0px 10px 0px;
 	box-decoration-break: clone;
 	-webkit-box-decoration-break:clone;
 }
 
 .Teralogic__page-contacts-p{
-	font:normal 20px/32px "Circe-ExtraLight", sans-serif;
+	font:normal 20px/33px "Circe-ExtraLight", sans-serif;
 	color:#fff;
 	margin:0px;
 	width:45%;
 }
 .Teralogic__page-contacts-p span{
 	background-color:rgba(0,0,0,0.5);
-	padding:1px 10px 2px;
+	padding:2px 10px 2px;
 	box-decoration-break: clone;
 	-webkit-box-decoration-break:clone;
 }
@@ -63,6 +63,14 @@
 	height:100%;
 	left:0px;
 	top:0px;
+}
+@-moz-document url-prefix(){
+	.Teralogic__page-contacts-h{
+		font:normal 40px/60px "Circe-ExtraLight", sans-serif;
+	}
+	.Teralogic__page-contacts-p{
+		font:normal 20px/35px "Circe-ExtraLight", sans-serif;
+	}
 }
 
 

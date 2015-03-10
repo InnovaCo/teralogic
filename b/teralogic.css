@@ -145,6 +145,12 @@ html, body {
 .Teralogic_header-logo{
 	margin:auto 0px auto 16px;
 }
+	.Teralogic_header-logo .Teralogic_header-logoimg{
+		cursor:pointer;
+	}
+	.fp-viewing-about .Teralogic_header-logo .Teralogic_header-logoimg{
+		cursor:default;
+	}
 
 .Teralogic_header-menu{
 	margin:0px;

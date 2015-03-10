@@ -52,29 +52,39 @@
 }
 
 .Teralogic__page-clients-h{
-	font:normal 40px/60px "Circe-ExtraLight", sans-serif;
+	font:normal 40px/59px "Circe-ExtraLight", sans-serif;
 	color:#fff;
 	margin:0px auto 21px;
 	text-align:left;
 }
 .Teralogic__page-clients-h span{
 	background-color:rgba(0,0,0,0.5);
-	padding:1px 10px 0px;
+	padding:0px 10px 0px;
 	box-decoration-break: clone;
 	-webkit-box-decoration-break:clone;
 }
 
 .Teralogic__page-clients-p{
-	font:normal 20px/37px "Circe-ExtraLight", sans-serif;
+	font:normal 20px/33px "Circe-ExtraLight", sans-serif;
 	color:#fff;
 	margin:0px;
 }
 .Teralogic__page-clients-p span{
 	background-color:rgba(0,0,0,0.5);
-	padding:4px 10px 4px;
+	padding:2px 10px 2px;
 	box-decoration-break: clone;
 	-webkit-box-decoration-break:clone;
 }
+
+@-moz-document url-prefix(){
+	.Teralogic__page-clients-h{
+		font:normal 40px/60px "Circe-ExtraLight", sans-serif;
+	}
+	.Teralogic__page-clients-p{
+		font:normal 20px/35px "Circe-ExtraLight", sans-serif;
+	}
+}
+
 
 .Teralogic__page-clients-p2{
 	font:normal 14px/24px "Circe-ExtraLight", sans-serif;
@@ -129,13 +139,20 @@
 
 @media screen and (min-width: 10px) and (max-width:1000px) {
 	.Teralogic__page-clients-h{
-		font:normal 30px/46px "Circe-ExtraLight", sans-serif;
+		font:normal 30px/45px "Circe-ExtraLight", sans-serif;
 	}
 	.Teralogic__page-clients-p{
-		font:normal 16px/31px "Circe-ExtraLight", sans-serif;
+		font:normal 16px/27px "Circe-ExtraLight", sans-serif;
 	}
+	@-moz-document url-prefix(){
+		.Teralogic__page-clients-p{
+			font:normal 16px/29px "Circe-ExtraLight", sans-serif;
+		}
+	}
+
 	.Teralogic__page-clients_cell1{
 		width:50%;
+		padding:0vh 0vw 0px 1vw;
 	}
 	.Teralogic__page-clients_cell3{
 		width:50%;

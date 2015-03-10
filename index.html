@@ -19,7 +19,7 @@
 
 <div class="Teralogic_header">
 	<div class="Teralogic__container Teralogic__container-header">
-		<div class="Teralogic_header-logo"><img src="b/logo.png" width="121" height="28" border="0" alt=""></div>
+		<div class="Teralogic_header-logo"><img src="b/logo.png" width="121" height="28" border="0" alt="" class="Teralogic_header-logoimg"></div>
 		<ul class="Teralogic_header-menu">
 			<li class="Teralogic_header-menu_item active" data-menuanchor="about"><a href="#about" class="Teralogic_header-menu_itemlink">Компания</a></li>
 			<li class="Teralogic_header-menu_item" data-menuanchor="activity"><a href="#activity" class="Teralogic_header-menu_itemlink">Деятельность</a></li>
@@ -27,7 +27,7 @@
 			<li class="Teralogic_header-menu_item" data-menuanchor="partners"><a href="#partners" class="Teralogic_header-menu_itemlink">Партнеры</a></li>
 			<li class="Teralogic_header-menu_item" data-menuanchor="contacts"><a href="#contacts" class="Teralogic_header-menu_itemlink">Контакты</a></li>
 		</ul>
-		<div class="Teralogic_header-langchng">Русский</div>
+		<div class="Teralogic_header-langchng"></div>
 	</div>
 </div>
 
@@ -48,15 +48,15 @@
 		<div class="Teralogic__page-content Teralogic__page-company" style="position:relative; top:-110%;">
 			<div class="Teralogic__container" style="position:relative; z-index:1000;">
 				<h1 class="Teralogic__page-company-h"><span>Находим инновационные решения, подобные искусству</span></h1>
-				<p class="Teralogic__page-company-p"><span>TeraLogic — команда профессионалов, которая занимается сложными технологическими проектами. Используя современные системы менеджмента, мы в короткий срок собираем вокруг проекта специалистов, которые фокусируются на задаче и с максимальной эффективностью решают ее. Мы работаем напрямую с производителями, что позволяет поддерживать высокий уровень экономической эффективности для заказчика. </span></p>
+				<p class="Teralogic__page-company-p"><span>TeraLogic&nbsp;— команда профессионалов, которая занимается сложными технологическими проектами.<br/>Используя современные системы менеджмента, мы&nbsp;в&nbsp;короткий срок собираем вокруг проекта специалистов, которые фокусируются на&nbsp;задаче и&nbsp;с&nbsp;максимальной эффективностью решают ее. Мы&nbsp;работаем напрямую с&nbsp;производителями, что&nbsp;позволяет поддерживать высокий уровень экономической эффективности для&nbsp;заказчика. </span></p>
 			</div>
 		</div>
 	</div>
  	<div class="Teralogic__page section">
 		<div class="Teralogic__page-content Teralogic__page-activity">
 			<div class="Teralogic__container">
-				<h1 class="Teralogic__page-activity-h"><span>Решаем сложнейшие IT-задачи в рекордное число ходов</span></h1>
-				<p class="Teralogic__page-activity-p"><span>Ядро наших проектов составляют высоконагруженные IT-инфраструктуры, системы энергообеспечения и безопасности. Основная специализация компании — поставка оборудования. Но чтобы прийти к главной цели, мы участвуем участвуем в проекте на всех стадиях: от разработки архитектурного решения до запуска.</span></p>
+				<h1 class="Teralogic__page-activity-h"><span>Решаем сложнейшие IT-задачи в&nbsp;рекордное число ходов</span></h1>
+				<p class="Teralogic__page-activity-p"><span>Ядро наших проектов составляют высоконагруженные IT-инфраструктуры, системы энергообеспечения и&nbsp;безопасности. Основная специализация компании&nbsp;— поставка оборудования. Но&nbsp;чтобы прийти к&nbsp;главной цели, мы&nbsp;участвуем участвуем в&nbsp;проекте на&nbsp;всех стадиях: от&nbsp;разработки архитектурного решения до&nbsp;запуска.</span></p>
 			</div>
 		</div>
 	</div>
@@ -64,8 +64,8 @@
 		<div class="Teralogic__page-content Teralogic__page-clients">
 			<div class="Teralogic__container">
 				<div class="Teralogic__page-clients_cell1">
-					<h1 class="Teralogic__page-clients-h"><span>Открываем новые горизонты вместе с ведущими мировыми компаниями</span></h1>
-					<p class="Teralogic__page-clients-p"><span>Среди наших клиентов крупные государственные и частные компании, для которых крайне важны надежность, детальность в подходе и легкость в коммуникациях.</span></p>
+					<h1 class="Teralogic__page-clients-h"><span>Открываем новые горизонты вместе с&nbsp;ведущими мировыми компаниями</span></h1>
+					<p class="Teralogic__page-clients-p"><span>Среди наших клиентов крупные государственные и&nbsp;частные компании, для&nbsp;которых крайне важны надежность, детальность в&nbsp;подходе и&nbsp;легкость в&nbsp;коммуникациях.</span></p>
 				</div>
 				<div class="Teralogic__page-clients_cell2 Teralogic__Scroller mThumbnailScroller" data-mts-axis="y">
 					<ul class="Teralogic__ScrollerContainer">
@@ -169,6 +169,10 @@
 		});
 
 		$(window).trigger('resize');
+
+		$('.Teralogic_header-logo img').click(function(){
+			$.fn.fullpage.moveTo(1);
+		});
 
 
 
