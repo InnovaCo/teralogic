@@ -959,11 +959,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 					myLeftMirror = proxy.offset.left - offsetX - tooltipWidth - 12;
 					var topDifference = (proxy.offset.top + tooltipHeight) - (proxy.offset.top + proxy.dimension.height);
 					myTop = proxy.offset.top - (topDifference / 2) - offsetY;
-					if(myTop < 70){
-						myTop = 70;
+					if(myTop < 80){
+						myTop = proxy.offset.top - proxy.offset.top*0.4;
+						if(myTop < 80) {
+							myTop = 80;
+						}
 					}
-					if(myTop > ($(window).height() - 250)){
-						myTop = $(window).height() - 260;
+					if(myTop > ($(window).height() - 260)){
+						myTop = $(window).height() - tooltipHeight - 80;
 					}
 					
 					
@@ -1064,13 +1067,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 					
 					// build out the arrow and append it		
 
-					if(myTop < 80){
-						arrowReposition = arrowReposition + "; margin-top:-50px;";
+					if(myTop < 90){
+						arrowReposition = arrowReposition + "; margin-top:-"+( tooltipHeight * (tooltipHeight/$(window).height()/2) )+"px;";
 					}
 					if(myTop > ($(window).height() - 280)){
-						arrowReposition = arrowReposition + "; margin-top:50px;";
+						arrowReposition = arrowReposition + "; margin-top:"+( tooltipHeight * (tooltipHeight/$(window).height()/2) )+"px;";
 					}
-					var arrowConstruct = '<div class="'+ arrowClass +' tooltipster-arrow" style="'+ arrowReposition +';">'+ arrowBorder +'<span style="border-color:'+ arrowColor +';"></span></div>';
+					var arrowConstruct = '<div class="'+ arrowClass +' tooltipster-arrow" style="'+ arrowReposition +'; margin-left:-1px;">'+ arrowBorder +'<span style="border-color:'+ arrowColor +';"></span></div>';
 					self.$tooltip.append(arrowConstruct);
 				}
 				

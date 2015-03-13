@@ -1,5 +1,6 @@
 .Teralogic__page-partners{
 	background-image:url("bg/bg4.jpg");
+	margin-top:64px;
 }
 
 .Teralogic__page-partners .Teralogic__container{
@@ -36,7 +37,7 @@
 
 .Teralogic__page-partners_cell1{
 	width:68%;
-	padding:0vh 0vw 0px 3vw;
+	padding:0vh 0vw 0px 5px;
 	margin:auto 0px;
 }
 .Teralogic__page-partners_cell2{

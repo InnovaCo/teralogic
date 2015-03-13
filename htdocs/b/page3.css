@@ -1,5 +1,6 @@
 .Teralogic__page-clients{
 	background-image:url("bg/bg3.jpg");
+	height:100%;
 }
 
 .Teralogic__page-clients .Teralogic__container{
@@ -36,7 +37,7 @@
 
 .Teralogic__page-clients_cell1{
 	width:60%;
-	padding:0vh 0vw 0px 3vw;
+	padding:0vh 0vw 0px 5px;
 	margin:auto; 0px;
 
 }
