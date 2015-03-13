@@ -52,11 +52,17 @@
 	width:60%;
 	height:auto;
 }
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+		.Teralogic__page-company-h{
+			font:normal 40px/58px "Circe-ExtraLight", sans-serif;
+		}
+	}
 .Teralogic__page-company-h span{
 	background-color:rgba(0,0,0,0.5);
 	padding:0px 10px 0px;
-	box-decoration-break: clone;
 	-webkit-box-decoration-break:clone;
+	-o-box-decoration-break: clone;
+	box-decoration-break: clone;
 }
 .Teralogic__page-company-p{
 	font:normal 20px/33px "Circe-ExtraLight", sans-serif;
@@ -68,8 +74,9 @@
 .Teralogic__page-company-p span{
 	background-color:rgba(0,0,0,0.5);
 	padding:2px 10px 2px;
-	box-decoration-break: clone;
 	-webkit-box-decoration-break:clone;
+	-o-box-decoration-break: clone;
+	box-decoration-break: clone;
 }
 
 @-moz-document url-prefix(){

@@ -44,9 +44,12 @@
 }
 .Teralogic__page-activity-h span{
 	background-color:rgba(0,0,0,0.5);
+	/*box-shadow: 0 0 0 10px rgba(0,0,0,0.5);*/
 	padding:0px 10px 0px;
 	box-decoration-break: clone;
-	-webkit-box-decoration-break:clone;
+	-webkit-box-decoration-break: clone;
+	-o-box-decoration-break: clone;
+	/*outline: solid 10px rgba(0,0,0,0.5);*/
 }
 
 .Teralogic__page-activity-p{
@@ -59,8 +62,9 @@
 .Teralogic__page-activity-p span{
 	background-color:rgba(0,0,0,0.5);
 	padding:2px 10px 2px;
-	box-decoration-break: clone;
 	-webkit-box-decoration-break:clone;
+	-o-box-decoration-break: clone;
+	box-decoration-break: clone;
 }
 
 

@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="b/page4.css"/>
 	<link rel="stylesheet" href="b/page5.css"/>
 </head>
-<body>
+<body class="fp-viewing-about">
 
 <div class="Teralogic_header">
 	<div class="Teralogic__container Teralogic__container-header">
@@ -40,7 +40,7 @@
 
 <div class="Teralogic">
 	<div class="Teralogic__page section">
-		<video id="video1" autoplay="autoplay" loop="loop" preload="auto" class="Teralogic__page-company_video">
+		<video id="video1" autoplay="autoplay" loop="loop" preload="auto" class="Teralogic__video Teralogic__page-company_video">
 			<source src="b/bg/bg1.mp4"></source>
 			<source src="b/bg/bg1.webm" type="video/webm"></source>
 		</video>
@@ -141,9 +141,14 @@
 			navigation: true,
 			navigationPosition: 'right',
 			afterRender: function(){
-				$('video').get(0).play();
+				$('#video1')[0].play();
+			},
+			afterLoad: function(anchorLink, index){
+				$('.Teralogic__video')[0].pause();
+				if($('#video'+index)[0]) $('#video'+index)[0].play();
 			}
 		});
+
 
 		$('.Teralogic__Scroller').mThumbnailScroller({
 			axis:"y",

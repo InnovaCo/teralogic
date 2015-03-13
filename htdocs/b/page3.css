@@ -38,8 +38,7 @@
 .Teralogic__page-clients_cell1{
 	width:60%;
 	padding:0vh 0vw 0px 5px;
-	margin:auto; 0px;
-
+	margin:auto 0px;
 }
 .Teralogic__page-clients_cell2{
 	min-width:248px;
@@ -58,6 +57,11 @@
 	margin:0px auto 21px;
 	text-align:left;
 }
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+		.Teralogic__page-clients-h{
+			font:normal 40px/58px "Circe-ExtraLight", sans-serif;
+		}
+	}
 .Teralogic__page-clients-h span{
 	background-color:rgba(0,0,0,0.5);
 	padding:0px 10px 0px;
