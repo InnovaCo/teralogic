@@ -135,6 +135,7 @@ html, body {
 
 .Teralogic__page-content{
 	margin:0px auto 0px;
+	height:100%;
 	height: -webkit-calc(100% - 144px);
 	height: -o-calc(100% - 144px);
 	height: calc(100% - 144px);
@@ -144,6 +145,7 @@ html, body {
 	background-position:50% 40%;
 	background-repeat:no-repeat;
 	background-size:cover;
+
 }
 
 .Teralogic_header-logo{
