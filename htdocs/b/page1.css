@@ -93,7 +93,7 @@
 }
 	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
 		.Teralogic__page-company-h{
-			font:normal 40px/58px "Circe-ExtraLight", sans-serif;
+			font:normal 40px/59px "Circe-ExtraLight", sans-serif;
 		}
 	}
 .Teralogic__page-company-h span{
@@ -103,6 +103,11 @@
 	-o-box-decoration-break: clone;
 	box-decoration-break: clone;
 }
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+		.Teralogic__page-company-h span{
+			padding:1px 10px 0px;
+		}
+	}
 .Teralogic__page-company-p{
 	font:normal 20px/33px "Circe-ExtraLight", sans-serif;
 	color:#fff;
@@ -117,6 +122,11 @@
 	-o-box-decoration-break: clone;
 	box-decoration-break: clone;
 }
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+		.Teralogic__page-company-p span{
+			padding:1px 10px 2px;
+		}
+	}
 
 @-moz-document url-prefix(){
 	.Teralogic__page-company-h{

@@ -49,7 +49,7 @@
 			<div class="Teralogic__video-container">
 				<div class="Teralogic__video-stretch">
 					<img class="Teralogic__video-imageSizer" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABVJREFUeNpi/P//PwM+wDgIFAAEGACsMA73HJTRcwAAAABJRU5ErkJggg==">
-					<video id="fp-viewing-about" poster="b/bg1.jpg" preload="auto" class="Teralogic__video Teralogic__video_forward Teralogic__page-company_video"><!-- autoplay="autoplay" loop="loop" -->
+					<video id="fp-viewing-about" poster="b/bg/bg1.jpg" preload="auto" class="Teralogic__video Teralogic__video_forward Teralogic__page-company_video"><!-- autoplay="autoplay" loop="loop" -->
 						<source src="b/bg/main_1.mp4"></source>
 						<source src="b/bg/main_1.webm" type="video/webm"></source>
 					</video>
@@ -146,7 +146,7 @@
 		function VideoBgPlay(){
 			var videoObj = '#'+$('body').attr('class');
 			$(videoObj).animate({'opacity':1}, 500);
-			$(videoObj)[0].play();
+			$(videoObj).get(0).play();
 		}
 		
 		var s = $('.Teralogic').fullpage({
@@ -158,25 +158,26 @@
 				setTimeout(VideoBgPlay, 1000);
 			},
 			afterLoad: function(anchorLink, index){
-				$('.Teralogic__video')[0].pause();
+				$('.Teralogic__video').get(0).pause();
 				$('.Teralogic__video_forward').css({'z-index':3, 'opacity':0});
 				$('.Teralogic__video_reverse').css({'z-index':2, 'opacity':0});
-				//if($('#video'+index)[0]) $('#video'+index)[0].play();
+				setTimeout(VideoBgPlay, 2000);
 			}
 		});
 		
+
 		//1-st video ended
-		$(".Teralogic__video_forward").on("pause", function (e) {
+		$(".Teralogic__video_forward").on("ended", function () {
 			var prnt = $(this).parent();
 			var itm = this;
 			setTimeout(function(){
 				$(itm).animate({'z-index':2, 'opacity':0}, 200);
 				$('.Teralogic__video_reverse', prnt).animate({'z-index':3, 'opacity':1}, 100);
-				$('.Teralogic__video_reverse', prnt)[0].play();
+				$('.Teralogic__video_reverse', prnt).get(0).play();
 			}, 2000);
 		});
 		//2-nd video ended
-		$(".Teralogic__video_reverse").on("pause", function (e) {
+		$(".Teralogic__video_reverse").on("ended", function () {
 			var prnt = $(this).parent();
 			$('.Teralogic__video_forward', prnt).css({'z-index':3, 'opacity':0});
 			$(this).animate({'opacity':0}, 500, function(){
