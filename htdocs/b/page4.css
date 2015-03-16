@@ -2,6 +2,11 @@
 	background-image:url("bg/bg4.jpg");
 	margin-top:64px;
 }
+@media (min-resolution: .001dpcm) {
+    _:-o-prefocus, .Teralogic__page-partners {
+        height:80%;
+    };
+}
 
 .Teralogic__page-partners .Teralogic__container{
 	display: -webkit-box;
@@ -46,7 +51,6 @@
 }
 .Teralogic__page-partners_cell3{
 	width:32%;
-/*	padding:12vh 2vw 0px 0vw;*/
 }
 
 .Teralogic__page-partners-h{

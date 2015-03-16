@@ -142,7 +142,7 @@ html, body {
 	width: -webkit-calc(100% - 80px);
 	width: -o-calc(100% - 80px);
 	width: calc(100% - 80px);
-	background-position:50% 40%;
+	background-position:50% 50%;
 	background-repeat:no-repeat;
 	background-size:cover;
 
@@ -212,6 +212,35 @@ html, body {
 .Teralogic__ScrollerItem{
 	cursor:pointer;
 }
+
+.Teralogic__video-container{
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.Teralogic__video-stretch{
+	display: inline-block;
+	width: 100%;
+	min-height: 100%;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+}
+
+.Teralogic__video-imageSizer{
+	min-width:100%;
+	min-height:100%;
+}
+
+
+
+
 
 @media screen and (min-width: 10px) and (max-width:900px) {
 	.Teralogic_header-menu_item{

@@ -1,15 +1,54 @@
 .Teralogic__page-company{
-/*	background-image:url("bg/bg1.jpg");*/
+	background-image:url("bg/bg1.jpg");
 	height:100%;
+	position:absolute;
+	top:0%;
+	left:50%;
+	width:95%;
+	-webkit-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
 }
 
 .Teralogic__page-company_video{
-	position: relative;
+/*	position: relative;
+	top: 0%;
+	height: 100%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -100%);
+	transform: translate(-50%, -100%);*/
+
+
+	position: absolute;
+	top: 0;
+	left: 50%;
+	height: 100%;
+	-webkit-transform: translate(-50%, 0);
+			transform: translate(-50%, 0);
+
+/*	left: 50%; 
+	
+	-webkit-transform: translate(-50%, -100%);
+	transform: translate(-50%, -100%);*/
+	z-index:2;
+	opacity:0;
+}
+.Teralogic__page-company_video_reverse{
+/*	position: relative;
 	top: 0;
 	left: 50%; 
-	height: 110%;
+	width: 100%;
+	-webkit-transform: translate(-50%, -200%);
+	transform: translate(-50%, -200%);
+*/
+	position: absolute;
+	top: 0;
+	left: 50%;
+	height: 100%;
 	-webkit-transform: translate(-50%, 0);
-	transform: translate(-50%, 0);
+			transform: translate(-50%, 0);
+
+	z-index:1;
+	opacity:0;
 }
 
 .Teralogic__page-company .Teralogic__container{

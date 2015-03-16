@@ -4,6 +4,7 @@
 	<meta charset="UTF-8"/>
 	<title>TeraLogic</title>
 	<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet"/>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
 
 	<link rel="stylesheet" href="b/jquery.mThumbnailScroller.css"/>
 	<link rel="stylesheet" href="b/jquery.fullPage.css"/>
@@ -40,14 +41,23 @@
 
 <div class="Teralogic">
 	<div class="Teralogic__page section">
-		<video id="video1" autoplay="autoplay" loop="loop" preload="auto" class="Teralogic__video Teralogic__page-company_video">
-			<source src="b/bg/bg1.mp4"></source>
-			<source src="b/bg/bg1.webm" type="video/webm"></source>
-		</video>
-		<div class="Teralogic__page-content Teralogic__page-company" style="position:relative; top:-110%;">
-			<div class="Teralogic__container" style="position:relative; z-index:1000;">
+		<div class="Teralogic__page-content Teralogic__page-company">
+			<div class="Teralogic__container" style="position:relative; z-index:4;">
 				<h1 class="Teralogic__page-company-h"><span>Находим инновационные решения, подобные искусству</span></h1>
 				<p class="Teralogic__page-company-p"><span>TeraLogic&nbsp;— команда профессионалов, которая занимается сложными технологическими проектами.<br/>Используя современные системы менеджмента, мы&nbsp;в&nbsp;короткий срок собираем вокруг проекта специалистов, которые фокусируются на&nbsp;задаче и&nbsp;с&nbsp;максимальной эффективностью решают ее. Мы&nbsp;работаем напрямую с&nbsp;производителями, что&nbsp;позволяет поддерживать высокий уровень экономической эффективности для&nbsp;заказчика. </span></p>
+			</div>
+			<div class="Teralogic__video-container">
+				<div class="Teralogic__video-stretch">
+					<img class="Teralogic__video-imageSizer" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABVJREFUeNpi/P//PwM+wDgIFAAEGACsMA73HJTRcwAAAABJRU5ErkJggg==">
+					<video id="fp-viewing-about" poster="b/bg1.jpg" preload="auto" class="Teralogic__video Teralogic__video_forward Teralogic__page-company_video"><!-- autoplay="autoplay" loop="loop" -->
+						<source src="b/bg/main_1.mp4"></source>
+						<source src="b/bg/main_1.webm" type="video/webm"></source>
+					</video>
+					<video id="fp-viewing-about_reverse" preload="auto" class="Teralogic__video Teralogic__video_reverse Teralogic__page-company_video_reverse">
+						<source src="b/bg/main_reverse.mp4"></source>
+						<source src="b/bg/main_reverse.webm" type="video/webm"></source>
+					</video>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -132,8 +142,12 @@
 
 <script type="text/javascript">
 
-
 	$(document).ready(function() {
+		function VideoBgPlay(){
+			var videoObj = '#'+$('body').attr('class');
+			$(videoObj).animate({'opacity':1}, 500);
+			$(videoObj)[0].play();
+		}
 		
 		var s = $('.Teralogic').fullpage({
 			anchors: ['about', 'activity', 'clients', 'partners', 'contacts'],
@@ -141,13 +155,37 @@
 			navigation: true,
 			navigationPosition: 'right',
 			afterRender: function(){
-				$('#video1')[0].play();
+				setTimeout(VideoBgPlay, 1000);
 			},
 			afterLoad: function(anchorLink, index){
 				$('.Teralogic__video')[0].pause();
-				if($('#video'+index)[0]) $('#video'+index)[0].play();
+				$('.Teralogic__video_forward').css({'z-index':3, 'opacity':0});
+				$('.Teralogic__video_reverse').css({'z-index':2, 'opacity':0});
+				//if($('#video'+index)[0]) $('#video'+index)[0].play();
 			}
 		});
+		
+		//1-st video ended
+		$(".Teralogic__video_forward").on("pause", function (e) {
+			var prnt = $(this).parent();
+			var itm = this;
+			setTimeout(function(){
+				$(itm).animate({'z-index':2, 'opacity':0}, 200);
+				$('.Teralogic__video_reverse', prnt).animate({'z-index':3, 'opacity':1}, 100);
+				$('.Teralogic__video_reverse', prnt)[0].play();
+			}, 2000);
+		});
+		//2-nd video ended
+		$(".Teralogic__video_reverse").on("pause", function (e) {
+			var prnt = $(this).parent();
+			$('.Teralogic__video_forward', prnt).css({'z-index':3, 'opacity':0});
+			$(this).animate({'opacity':0}, 500, function(){
+				$('.Teralogic__video_reverse', prnt).css({'z-index':2});
+				setTimeout(VideoBgPlay, 2000);
+			});
+		});
+
+		
 
 
 		$('.Teralogic__Scroller').mThumbnailScroller({
