@@ -21,6 +21,7 @@ html, body {
 	font-size: 14px;
 	background-color:#171717;
 	color:#fff;
+	min-width:1004px;
 }
 
 
@@ -45,6 +46,7 @@ html, body {
 
 .Teralogic__container{
 	max-width:1200px;
+	min-width:1004px;
 	margin:0px auto;
 	height:100%;
 }
