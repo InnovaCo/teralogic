@@ -1,11 +1,38 @@
 .Teralogic__page-partners{
 	background-image:url("bg/bg4.jpg");
 	margin-top:64px;
+	position:absolute;
+	left:50%;
+	width:95%;
+	-webkit-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
 }
 @media (min-resolution: .001dpcm) {
     _:-o-prefocus, .Teralogic__page-partners {
         height:80%;
     };
+}
+
+.Teralogic__page-partners_video{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	height: 100%;
+	-webkit-transform: translate(-50%, 0);
+			transform: translate(-50%, 0);
+	z-index:2;
+	opacity:0;
+	border:1px solid blue;
+}
+.Teralogic__page-partners_video_reverse{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	height: 100%;
+	-webkit-transform: translate(-50%, 0);
+			transform: translate(-50%, 0);
+	z-index:1;
+	opacity:0;
 }
 
 .Teralogic__page-partners .Teralogic__container{
@@ -58,6 +85,7 @@
 	color:#fff;
 	margin:0px auto 21px;
 	text-align:left;
+	white-space:nowrap;
 }
 .Teralogic__page-partners-h span{
 	background-color:rgba(0,0,0,0.5);
@@ -70,6 +98,7 @@
 	font:normal 20px/33px "Circe-ExtraLight", sans-serif;
 	color:#fff;
 	margin:0px;
+	white-space:nowrap;
 }
 .Teralogic__page-partners-p span{
 	background-color:rgba(0,0,0,0.5);
@@ -101,16 +130,14 @@
 }
 
 
-@media screen and (min-width: 1001px) and (max-width:1150px) {
+@media screen and (min-width: 10px) and (max-width:1200px) {
 	.Teralogic__page-partners_cell1{
-		width:60%;
+		width:58%;
+		padding:0vh 0vw 0px 1vw;
 	}
 	.Teralogic__page-partners_cell3{
-		width:40%;
+		width:42%;
 	}
-}
-
-@media screen and (min-width: 10px) and (max-width:1000px) {
 	.Teralogic__page-partners-h{
 		font:normal 30px/45px "Circe-ExtraLight", sans-serif;
 	}
@@ -122,13 +149,5 @@
 			font:normal 16px/29px "Circe-ExtraLight", sans-serif;
 		}
 	}
-
-	.Teralogic__page-partners_cell1{
-		width:50%;
-		padding:0vh 0vw 0px 1vw;
-	}
-	.Teralogic__page-partners_cell3{
-		width:50%;
-	}
-
 }
+

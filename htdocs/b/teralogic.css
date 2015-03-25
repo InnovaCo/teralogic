@@ -200,6 +200,9 @@ html, body {
 		color:#fff;
 		display:block;
 	}
+	.Teralogic_header-menu_itemlink:hover{
+		color:#a3dcb0;
+	}
 
 .Teralogic_header-langchng{
 	color:#fff;
