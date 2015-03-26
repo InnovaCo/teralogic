@@ -46,7 +46,7 @@ html, body {
 
 .Teralogic__container{
 	max-width:1200px;
-	min-width:1004px;
+/*	min-width:1004px;*/
 	margin:0px auto;
 	height:100%;
 }

@@ -163,16 +163,13 @@
 }
 
 
-@media screen and (min-width: 1001px) and (max-width:1150px) {
+@media screen and (min-width: 10px) and (max-width:1150px) {
 	.Teralogic__page-clients_cell1{
 		width:58%;
 	}
 	.Teralogic__page-clients_cell3{
 		width:42%;
 	}
-}
-
-@media screen and (min-width: 10px) and (max-width:1100px) {
 	.Teralogic__page-clients-h{
 		font:normal 30px/45px "Circe-ExtraLight", sans-serif;
 	}
@@ -184,6 +181,9 @@
 			font:normal 16px/29px "Circe-ExtraLight", sans-serif;
 		}
 	}
+}
+
+@media screen and (min-width: 10px) and (max-width:1100px) {
 
 	.Teralogic__page-clients_cell1{
 		width:60%;
