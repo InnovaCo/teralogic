@@ -15,6 +15,9 @@
 	<link rel="stylesheet" href="b/page3.css"/>
 	<link rel="stylesheet" href="b/page4.css"/>
 	<link rel="stylesheet" href="b/page5.css"/>
+
+	<script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+
 </head>
 <body class="fp-viewing-about">
 
@@ -167,8 +170,21 @@
 					<p class="Teralogic__page-contacts-p"><span>Звоните: +7&nbsp;(499)&nbsp;400-22-80</span></p>
 					<p class="Teralogic__page-contacts-p"><span>Пишите: <a href="mailto:cto@teralogic.ru" class="Teralogic__page-contacts-link">cto@teralogic.ru</a></span></p>	
 				</div>
-				<div class="Teralogic__page-contacts_map">
-					<script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=ISspwRZGWrgySNvRMx1h9y09aArSE3xN&width=100%&height=1000"></script>
+				<div class="Teralogic__page-contacts_map" id="map">
+					<!-- <script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=ISspwRZGWrgySNvRMx1h9y09aArSE3xN&width=100%&height=1000"></script> -->
+					<script>
+						var myMap;
+						ymaps.ready(init);
+
+						function init(){ 
+							myMap = new ymaps.Map("map", {
+								center: [55.74691578, 37.65423874],
+								zoom: 16
+							});
+							var myPlacemark = new ymaps.Placemark([55.74669400, 37.65909300]);
+							myMap.geoObjects.add(myPlacemark);
+						}
+					</script>
 				</div>
 				<div class="Teralogic__page-contacts_mapbg Teralogic__page-contacts_mapbg1"></div>
 				<div class="Teralogic__page-contacts_mapbg Teralogic__page-contacts_mapbg2"></div>
@@ -275,6 +291,10 @@
 			}
 				else $(this).parent().removeClass('Teralogic__ScrollerStretch');
 		});
+
+		setTimeout(function(){
+			myMap.container.fitToViewport();
+		}, 1000);
 	});
 </script>
 
